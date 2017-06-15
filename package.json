@@ -1,0 +1,14 @@
+{
+  "name": "base-scss-theme",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Plexus",
+  "license": "Propietary",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-wait": "0.0.2"
+  }
+}
