@@ -11,4 +11,4 @@
 
 `gulp watch` para compilar e iniciar control de cambios.
 
-`gulp compile` para generar versión 'release'.
+`gulp build` para generar versión 'release'.
