@@ -12,21 +12,21 @@ var package = require('./package.json');
 var scss = package.config.scss;
 var css = package.config.css;
 
-gulp.task('build', ['clean'], function () {
-  procSass(true);
-});
-
-gulp.task('watch', ['clean'], function () {
-  procSass();
-  gulp.watch(scss + '/{,**/}*.{scss,sass}', ['sass']);
-});
-
-gulp.task('clean', function () {
-  gulp.src([], { read: false })
+gulp.task('clean', async function () {
+  gulp.src(css + '/**.css', { read: false })
     .pipe(clean());
 });
 
-gulp.task('sass', function() {
+gulp.task('build', gulp.series('clean', async function () {
+  procSass(true);
+}));
+
+gulp.task('watch', gulp.series('clean', async function () {
+  procSass();
+  gulp.watch(scss + '/{,**/}*.{scss,sass}', gulp.series('sass'));
+}));
+
+gulp.task('sass', async function() {
   procSass();
 });
 

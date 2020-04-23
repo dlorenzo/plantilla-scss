@@ -3,9 +3,10 @@
 // ...
 
 // Módulos
-@import "modulos/init";
+@import "partials/util.scss";
+@import "partials/variables.scss";
 
 // Parciales ordenadas
-@import "parciales/tipografia";
-@import "parciales/base";
-@import "parciales/media-queries";
+@import "partials/tipografia";
+@import "partials/base";
+@import "partials/media-queries";
